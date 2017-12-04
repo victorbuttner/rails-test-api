@@ -1,0 +1,18 @@
+
+<div class="container" >
+	<div class="row">
+	<h1 class="text-center"> API Dashboard </h1>
+		<div class="col-md-6 ">
+			<h2 class="text-center"> Requests by token </h2>
+			<%= pie_chart @requests %>
+		</div>
+			<div class="col-md-6 ">
+			<h2 class="text-center"> Questions / Answers / Users  </h2>
+			<%= column_chart  [
+			{name: "Questions", data: {"Amount": @questions}},
+			{name: "Answers", data: {"Amount": @answers}},
+			{name: "Users", data: {"Amount": @users }}
+			]%>
+
+	</div>
+</div>
